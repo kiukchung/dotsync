@@ -1,0 +1,32 @@
+# Location of your dotfiles in $HOME
+DOTFILES=.dotfiles
+
+# dotfiles to symlink
+#
+# srcfile:dstfile
+# dstfile will be '.$srcfile' by default (with path removed)
+#
+[files]
+dotsyncrc
+bin:bin
+git/gitconfig
+git/gitignore
+emacs/emacs
+emacs/emacsd:.emacs.d
+tmux/tmux.conf
+vnc/vnc
+zsh/custom-zsh-config:custom-zsh-config
+zsh/zshrc
+aws/aws
+Xmodmap
+proxychains
+[endfiles]
+
+# Hosts to sync
+## hostname                     type=masterhost, ANY or NONE    files=dotfile:tolink,another:tolink
+[hosts]
+cloudgpu git=NONE
+devgpu rsync=cloudgpu
+ip-10-2-77-65 rsync=cloudgpu
+[endhosts]
+

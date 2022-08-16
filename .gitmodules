@@ -1,0 +1,39 @@
+#
+# dotphiles : https://github.com/dotphiles/dotphiles
+#
+# Git submodules in this repo
+#
+# Authors:
+#   Ben O'Hara <bohara@gmail.com>
+#
+
+[submodule "dotsync"]
+	path = dotsync
+	url = https://github.com/dotphiles/dotsync.git
+[submodule "zsh/oh-my-zsh"]
+	path = zsh/oh-my-zsh
+	url = https://github.com/ohmyzsh/ohmyzsh.git
+[submodule "emacs/.emacs.d/straight/repos/melpa"]
+	path = emacs/.emacs.d/straight/repos/melpa
+	url = https://github.com/melpa/melpa.git
+[submodule "emacs/emacs.d/straight/repos/melpa"]
+	path = emacs/emacs.d/straight/repos/melpa
+	url = https://github.com/melpa/melpa.git
+[submodule "emacs/emacs.d/straight/repos/emacsmirror-mirror"]
+	path = emacs/emacs.d/straight/repos/emacsmirror-mirror
+	url = https://github.com/emacs-straight/emacsmirror-mirror.git
+[submodule "emacs/emacs.d/straight/repos/straight.el"]
+	path = emacs/emacs.d/straight/repos/straight.el
+	url = https://github.com/raxod502/straight.el.git
+[submodule "emacs/emacs.d/straight/repos/popup-el"]
+	path = emacs/emacs.d/straight/repos/popup-el
+	url = https://github.com/auto-complete/popup-el.git
+[submodule "emacs/emacs.d/straight/repos/helm"]
+	path = emacs/emacs.d/straight/repos/helm
+	url = https://github.com/emacs-helm/helm.git
+[submodule "emacs/emacs.d/straight/repos/emacs-async"]
+	path = emacs/emacs.d/straight/repos/emacs-async
+	url = https://github.com/jwiegley/emacs-async.git
+[submodule "emacs/emacs.d/straight/repos/gnu-elpa-mirror"]
+	path = emacs/emacs.d/straight/repos/gnu-elpa-mirror
+	url = https://github.com/emacs-straight/gnu-elpa-mirror.git

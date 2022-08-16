@@ -1,0 +1,50 @@
+[user]
+	name = Kiuk Chung
+	email = kiukchung@gmail.com
+[amazon]
+	append-cr-url = true
+[core]
+	editor = emacs
+	pager = less -FMRiX
+	excludesFile = ~/.gitignore
+[alias]
+	co = checkout
+	br = branch
+	ci = commit
+	st = status
+	logp = log --pretty=format:\"%h - %an, %ar : %s\"
+	logl = log --pretty=oneline
+	graph = log --graph --full-history --color --pretty=format:\"%x1b[31m%h%x09%x1b[32m%d%x1b[0m%x20%s %C(yellow)(%cr)  %C(cyan)<%an>\"
+	grapha = log --graph --full-history --all --color --pretty=format:\"%x1b[31m%h%x09%x1b[32m%d%x1b[0m%x20%s %C(yellow)(%cr)  %C(cyan)<%an>\"
+	lstree = ls-tree -r --name-only
+	dag = log --graph --format='format:%C(yellow)%h%C(reset) %C(blue)%an <%ae>%C(reset) %C(magenta)%cr%C(reset)%C(auto)%d%C(reset)%n%s' --date-order
+	#listbranch = for-each-ref --sort=-committerdate --format='%(committerdate) %(authorname) %(refname)
+[color]
+	branch = auto
+	diff = auto
+	status = auto
+	ui = auto
+[color "branch"]
+	current = yellow reverse
+	local = yellow
+	remote = green
+[color "diff"]
+	meta = yellow bold
+	frag = magenta bold
+	old = red bold
+	new = green bold
+[color "status"]
+	added = yellow
+	changed = green
+	untracked = cyan
+
+[push]
+	default = upstream
+
+[mergetool.ediff]
+    cmd = emacsclient --eval \"(git-mergetool-emacsclient-ediff \\\"$LOCAL\\\" \\\"$REMOTE\\\" \\\"$BASE\\\" \\\"$MERGED\\\")\"
+[mergetool]
+    prompt = false
+[merge]
+    tool = ediff
+    

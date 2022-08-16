@@ -1,0 +1,11 @@
+#
+# dotphiles : https://github.com/dotphiles/dotphiles
+#
+# Ignore these files when rsyncing to remote machines
+#
+
+.git/
+*.d/localhost
+ssh/*
+
+
