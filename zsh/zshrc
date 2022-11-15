@@ -10,6 +10,7 @@ ZSH_THEME="kiuk"
 COMPLETION_WAITING_DOTS="true"
 
 plugins=(
+    pyenv
     autojump
     git-prompt
     zsh-syntax-highlighting

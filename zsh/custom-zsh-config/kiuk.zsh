@@ -175,9 +175,9 @@ bindkey "^[[B" history-search-forward
 
 export PROMPT_COMMAND="history -a; history -n"
 
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
+#export PYENV_ROOT="$HOME/.pyenv"
+#export PATH="$PYENV_ROOT/bin:$PATH"
+#eval "$(pyenv init -)"
 
 # Ruby
 #export LDFLAGS="-L/usr/local/opt/ruby/lib"
@@ -200,4 +200,4 @@ autoload -Uz compinit && compinit
 complete -C '/usr/local/bin/aws_completer' aws
 
 # activate pytorch conda env
-source activate pytorch
+# source activate pytorch
