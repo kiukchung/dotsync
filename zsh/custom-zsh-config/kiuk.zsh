@@ -6,6 +6,8 @@ export TERM='xterm-256color'
 # Highlight on tab menu
 #zstyle ':completion:*' menu select
 
+export GPG_TTY="$(tty)"
+
 # Synchronize kerberos credentials across sessions
 # On Mac we need to unset this since Heracles manages kerberos tokens
 #export KRB5CCNAME=FILE:/tmp/krb5cc_`id -ru`
