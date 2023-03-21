@@ -1,5 +1,1 @@
-#!/bin/bash
-#xrdb $HOME/.Xresources
-#exec vncconfig -nowin &
-startxfce4 &
-#startlxde &
+xstartup.al2

@@ -4,4 +4,5 @@
 ##
 #$geometry = "1320x2150";
 $geometry = "1915x2050";
+SecurityTypes=None
 
