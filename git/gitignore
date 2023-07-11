@@ -6,3 +6,4 @@
 ssh/*.pem
 .idea
 .python-version
+.torchxconfig
