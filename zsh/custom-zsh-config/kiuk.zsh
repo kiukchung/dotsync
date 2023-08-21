@@ -33,8 +33,8 @@ HISTFILESIZE=2000
 #export IGNOREEOF=100
 
 #grep
-#export GREP_OPTIONS='--color=auto'
-export GREP_COLOR='1;35'
+export GREP_OPTIONS='--color=auto'
+#export GREP_COLOR='1;35'
 
 ## Aliases
 

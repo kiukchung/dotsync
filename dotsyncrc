@@ -26,8 +26,7 @@ pycharm
 # Hosts to sync
 ## hostname                     type=masterhost, ANY or NONE    files=dotfile:tolink,another:tolink
 [hosts]
-cloudgpu git=NONE
-devgpu rsync=cloudgpu
-ip-10-2-77-65 rsync=cloudgpu
+localhost git=NONE
+cloudtop rsync=localhost
 [endhosts]
 
