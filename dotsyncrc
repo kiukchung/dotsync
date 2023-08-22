@@ -21,6 +21,7 @@ aws/aws
 Xmodmap
 proxychains
 pycharm
+fonts
 [endfiles]
 
 # Hosts to sync
