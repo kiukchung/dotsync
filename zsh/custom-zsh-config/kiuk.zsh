@@ -177,7 +177,4 @@ bindkey "^[[B" history-search-forward
 
 export PROMPT_COMMAND="history -a; history -n"
 
-#autoload bashcompinit && bashcompinit
-#autoload -Uz compinit && compinit
-
 # AWS CLI command completion: see custom-zsh-config/plugins/aws
