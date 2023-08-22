@@ -177,29 +177,7 @@ bindkey "^[[B" history-search-forward
 
 export PROMPT_COMMAND="history -a; history -n"
 
-#export PYENV_ROOT="$HOME/.pyenv"
-#export PATH="$PYENV_ROOT/bin:$PATH"
-#eval "$(pyenv init -)"
+#autoload bashcompinit && bashcompinit
+#autoload -Uz compinit && compinit
 
-# Ruby
-#export LDFLAGS="-L/usr/local/opt/ruby/lib"
-#export CPPFLAGS="-I/usr/local/opt/ruby/include"
-
-# libffi
-#export LDFLAGS="-L/usr/local/opt/libffi/lib"
-#export CPPFLAGS="-I/usr/local/opt/libffi/include"
-#export PKG_CONFIG_PATH="/usr/local/opt/libffi/lib/pkgconfig"
-
-# Java (MacOS)
-#export JAVA_HOME="$(/usr/libexec/java_home)"
-
-[[ -s /home/kiuk/.autojump/etc/profile.d/autojump.sh ]] && source /home/kiuk/.autojump/etc/profile.d/autojump.sh
-
-autoload bashcompinit && bashcompinit
-autoload -Uz compinit && compinit
-
-# AWS CLI command completion
-complete -C '/usr/local/bin/aws_completer' aws
-
-# activate pytorch conda env
-# source activate pytorch
+# AWS CLI command completion: see custom-zsh-config/plugins/aws
