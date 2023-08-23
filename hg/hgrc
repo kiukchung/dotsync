@@ -1,0 +1,24 @@
+[ui]
+editor = code --wait
+merge = meld
+username = kiuk
+
+[extdiff]
+cmd.meld = /usr/bin/meld
+cmd.pmeld = /usr/bin/meld
+
+[extensions]
+figstatus = ~/fig_status.py
+extdiff =
+
+[merge-tools]
+meld.args = --auto-merge --label='incoming' $local --label='merged' $base --label='existing' $other -o $output
+pmeld.args = -r .^
+
+[figstatus]
+modified_str = 
+added_str = 
+deleted_str = 
+unknown_str = 
+unexported_str = 
+obsolete_str = 

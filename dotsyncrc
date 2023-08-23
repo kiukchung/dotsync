@@ -22,6 +22,7 @@ Xmodmap
 proxychains
 pycharm
 fonts
+hg/hgrc:.hgrc
 [endfiles]
 
 # Hosts to sync

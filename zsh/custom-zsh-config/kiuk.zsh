@@ -111,7 +111,8 @@ gf(){ find -L -iname "*$2*" -print0 | xargs -0 grep -il "$1" 2>/dev/null}
 pf(){ ps -eaf | grepc "$*" }
 
 masterkill(){ sudo kill -9 `ps -eaf | grepc "$*" | grep -v grep | awk '{print $2}'` }
-ta(){ tmux attach-session -dt "$*" }
+
+#ta(){ tmux attach-session -dt "$*" }
 
 rless(){ ls -ltr "$1" }
 
