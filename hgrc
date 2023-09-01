@@ -1,0 +1,5 @@
+[ui]
+paginate = False
+
+[pager]
+ignore = log,xl,ll,status

@@ -3,6 +3,9 @@ editor = code --wait
 merge = meld
 username = kiuk
 
+[pager]
+ignore = log,ll,xl,status
+
 [extdiff]
 cmd.meld = /usr/bin/meld
 cmd.pmeld = /usr/bin/meld

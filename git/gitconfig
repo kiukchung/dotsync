@@ -1,12 +1,15 @@
 [user]
 	name = Kiuk Chung
-	email = kiukchung@gmail.com
-[amazon]
-	append-cr-url = true
+	email = kiuk@google.com
+
+[url "git@github.com:"]
+	insteadOf = https://github.com/
+
 [core]
 	editor = emacs
 	pager = less -FMRiX
 	excludesFile = ~/.gitignore
+
 [alias]
 	co = checkout
 	br = branch
