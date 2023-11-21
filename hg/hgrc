@@ -1,5 +1,5 @@
 [ui]
-editor = code --wait
+editor = emacs -nw
 merge = meld
 username = kiuk
 
@@ -25,3 +25,16 @@ deleted_str = 
 unknown_str = 
 unexported_str = 
 obsolete_str = 
+
+[google]
+upload.default-rev = chain
+
+[extensions]
+unsupported.quahog=
+
+[experimental]
+evolution.allowdivergence=yes
+
+[hgd.aliases]
+3p = /third_party/py
+pt = /third_party/py/torch

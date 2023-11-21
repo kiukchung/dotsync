@@ -124,8 +124,8 @@ rosed(){ sed 's/|/\n/g' $(ls -tr $1* | tail -1 )  }
 #-----------
 # Git Proxy:
 #-----------
-er() { for f in *; do echo "${fg[yellow]}@$f${fg[default]}"; (cd $f && $@); done }
-changes(){ for f in *; do echo $f; (cd $f && git --no-pager show -s --format='%an <%ae>' HEAD); done}
+#er() { for f in *; do echo "${fg[yellow]}@$f${fg[default]}"; (cd $f && $@); done }
+#changes(){ for f in *; do echo $f; (cd $f && git --no-pager show -s --format='%an <%ae>' HEAD); done}
 
 #-----------
 # Global 
