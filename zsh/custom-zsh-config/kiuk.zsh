@@ -23,10 +23,12 @@ export GPG_TTY="$(tty)"
 # History sharing between bash windows
 # Avoid duplicates
 export HISTCONTROL=ignoredups:erasedups
+setopt appendhistory
 setopt share_history
 
 # For setting history length see HISTSIZE and HISTFILESIZE in bash(1)
 HISTSIZE=10000
+SAVEHIST=$HISTSIZE
 HISTFILESIZE=2000
 
 # effectively prevents ctrl+d from exiting shell
@@ -176,6 +178,29 @@ export LANG=en_US.UTF-8
 bindkey "^[[A" history-search-backward
 bindkey "^[[B" history-search-forward
 
+#to know the key binding for a key, run `od -c` and press the key
+bindkey '^[[3~' delete-char           #enables DEL key proper behaviour
+bindkey '^[[1;5C' forward-word        #[Ctrl-RightArrow] - move forward one word
+bindkey '^[[1;5D' backward-word       #[Ctrl-LeftArrow] - move backward one word
+bindkey  "^[[H"   beginning-of-line   #[Home] - goes at the begining of the line
+bindkey  "^[[F"   end-of-line         #[End] - goes at the end of the line
+
 export PROMPT_COMMAND="history -a; history -n"
 
 # AWS CLI command completion: see custom-zsh-config/plugins/aws
+
+#-----------------------------
+# zsh plugin related configs
+#-----------------------------
+
+# zsh-syntax-highlightning
+ZSH_HIGHLIGHT_HIGHLIGHTERS+=(brackets cursor)
+
+function get_fig_prompt_template() {
+  echo -n '%b%B%F{white}('
+  echo -n '%F{magenta}p4head%F{yellow}FIG_PROMPT_AHEAD%F{orange}FIG_PROMPT_UNEXPORTED%F{red}FIG_PROMPT_OBSOLETE'
+  echo -n '%F{white}|'
+  echo -n '%F{yellow}FIG_PROMPT_MODIFIED%F{green}FIG_PROMPT_ADDED'
+  echo -n '%F{red}FIG_PROMPT_DELETED%F{magenta}FIG_PROMPT_UNKNOWN%F{white}FIG_PROMPT_CLEAN'
+  echo -n '%F{white})%b'
+}

@@ -13,13 +13,13 @@ plugins=(
     autojump
     git-prompt
     shrink-path
+    fzf
     # aws (uncomment if using aws)
     google
+    fig-prompt
     # zsh-* plugins need to go LAST!
     zsh-syntax-highlighting
     zsh-autosuggestions
 )
-
-#fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
 
 source $ZSH/oh-my-zsh.sh
