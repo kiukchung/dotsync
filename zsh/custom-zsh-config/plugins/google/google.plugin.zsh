@@ -20,3 +20,5 @@ alias bluze=/google/bin/releases/blueprint-bluze/public/bluze
 alias er=/google/data/ro/users/ho/hooper/er
 alias colab=/google/bin/releases/grp-ix-team/rapid/colab-cli/cli.par
 alias qu4=/google/bin/releases/python-team/qu4/qu4
+alias gpaste=/google/src/head/depot/eng/tools/pastebin
+alias prdcs='prdcs find --noheader --mask=logical_config'
