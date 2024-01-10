@@ -14,6 +14,7 @@ git/gitignore
 emacs/emacs
 emacs/emacsd:.emacs.d
 tmux/tmux.conf
+tmux/tmux
 vnc/vnc
 zsh/custom-zsh-config:custom-zsh-config
 zsh/zshrc

@@ -22,4 +22,6 @@ plugins=(
     zsh-autosuggestions
 )
 
+PATH=$PATH:$HOME/bin
+
 source $ZSH/oh-my-zsh.sh

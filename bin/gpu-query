@@ -1,0 +1,29 @@
+#!/usr/bin/sh
+
+if [ -x "$(command -v nvidia-smi)" ]; then
+    :
+else
+    exit 0
+fi
+
+fields=(
+    index                 # 0
+    name                  # 1
+    driver_version        # 2
+    compute_cap           # 3 (compute capability)
+)
+
+
+result=$(nvidia-smi --format=csv,noheader,nounits --query-gpu=$(printf ",%s" "${fields[@]}"))
+cuda_version=$(nvidia-smi --query -i 0 | grep -E 'CUDA Version\s+:\s*[0-9]+\.[0-9]+' | sed -e 's/CUDA Version//g' -e 's/ //g' -e 's/://')
+
+get_index () {
+    idx=$1
+    echo $result | cut -d"," -f $((idx+1)) | sed 's/ //'
+}
+
+driver_version="$(get_index 2)"
+ccap=$(get_index 3)
+code=$(echo "$ccap" | sed 's/\.//')
+echo "cuda-$cuda_version, sm_$code, $driver_version"
+

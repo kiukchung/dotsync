@@ -1,0 +1,84 @@
+#!/usr/bin/sh
+#set -ex
+
+if [ -x "$(command -v nvidia-smi)" ]; then
+    :
+else
+    exit 0
+fi
+
+INDEX=0
+GPU_LOAD=0
+MEM_LOAD=0
+
+while getopts "i::gm" o; do
+    case "${o}" in
+	g)
+	    GPU_LOAD=1 ;;
+	m)
+	    MEM_LOAD=1 ;;
+	i)
+	    INDEX=${OPTARG};;
+    esac
+done
+
+shift $((OPTIND-1))
+
+fields=(
+    index                 # 0
+    name                  # 1
+    driver_version        # 2
+    compute_cap           # 3 (compute capability)
+    utilization.gpu       # 4
+    utilization.memory    # 5
+    memory.used           # 6
+    memory.reserved       # 7
+    memory.free           # 8
+    memory.total          # 9
+    temperature.gpu       # 10
+    temperature.memory    # 11
+    power.draw            # 12
+    power.limit           # 13
+
+)
+
+result=$(nvidia-smi --format=csv,noheader,nounits -i=$INDEX --query-gpu=$(printf ",%s" "${fields[@]}"))
+
+get_index () {
+    idx=$1
+    echo $result | cut -d"," -f $((idx+1)) | sed 's/ //'
+}
+
+to_GiB() {
+    gib=$(echo "scale=2; $(get_index $1) / 1024.0" | bc)
+    echo $(fmt $gib)
+}
+
+fmt() {
+    printf '%02G' $1
+}
+
+driver_version="$(get_index 2)"
+ccap=$(get_index 3)
+
+gpu=$(get_index 1 |  sed -E 's/NVIDIA \w+ //')
+index=$(get_index 0)
+
+gpu_util=$(get_index 4 | sed 's/ //g')
+mem_util=$(get_index 5 | sed 's/ //g')
+
+mem_used=$(to_GiB 6)
+mem_reserved=$(to_GiB 7)
+mem_free=$(to_GiB 8)
+mem_total=$(to_GiB 9)
+
+power=$(fmt $(get_index 12))
+power_limit=$(fmt $(get_index 13))
+
+if [ ${GPU_LOAD} -eq 1 ]; then
+    echo "${gpu_util}% (${power}/${power_limit}W)"
+fi
+
+if [ ${MEM_LOAD} -eq 1 ]; then
+    echo "${mem_util}% ($mem_free/$mem_total)"
+fi
