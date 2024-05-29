@@ -8,22 +8,23 @@ DOTFILES=.dotfiles
 #
 [files]
 dotsyncrc
-bin:bin
-git/gitconfig
-git/gitignore
-emacs/emacs
-emacs/emacsd:.emacs.d
-tmux/tmux.conf
-tmux/tmux
-vnc/vnc
-zsh/custom-zsh-config:custom-zsh-config
-zsh/zshrc
-aws/aws
+gitconfig
+gitignore
+emacs
+emacs.d
+tmux.conf
+vnc
+zshrc
 Xmodmap
 proxychains
 pycharm
+hgrc
+condarc
+python-version
+aws
 fonts
-hg/hgrc:.hgrc
+custom-zsh-config:custom-zsh-config
+bin:bin
 [endfiles]
 
 # Hosts to sync

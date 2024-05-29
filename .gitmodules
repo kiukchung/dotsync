@@ -38,5 +38,5 @@
 	path = emacs/emacs.d/straight/repos/gnu-elpa-mirror
 	url = https://github.com/emacs-straight/gnu-elpa-mirror.git
 [submodule "zsh/custom-zsh-config/plugins/zsh-completions"]
-	path = zsh/custom-zsh-config/plugins/zsh-completions
+	path = custom-zsh-config/plugins/zsh-completions
 	url = https://github.com/zsh-users/zsh-completions

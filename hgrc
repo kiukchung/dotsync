@@ -1,5 +1,61 @@
 [ui]
-paginate = False
+editor = emacs -nw
+merge = meld
+username = kiuk
 
 [pager]
-ignore = log,xl,ll,status
+ignore = log,ll,xl,status
+
+[extdiff]
+#cmd.meld = /usr/bin/meld
+#cmd.pmeld = /usr/bin/meld
+
+[extensions]
+figstatus = ~/fig_status.py
+extdiff =
+beautifygraph =
+
+[figstatus]
+modified_str = ●
+added_str = ✚
+deleted_str = ✖
+unknown_str = …
+clean_str = ✔
+unexported_str = ↗
+obsolete_str = ∅
+ahead_str = ↑
+
+[merge-tools]
+#meld.args = --auto-merge --label='incoming' $local --label='merged' $base --label='existing' $other -o $output
+#pmeld.args = -r .^
+
+[google]
+upload.default-rev = chain
+
+[extensions]
+unsupported.quahog=
+
+[experimental]
+evolution.allowdivergence=yes
+
+[hgd.aliases]
+3p = /third_party/py
+pt = /third_party/py/torch
+
+[fix]
+google3format:pattern = set:(rootglob:**
+			    and not rootglob:google3/third_party/py/torch/**
+			    or      rootglob:google3/third_party/py/torch/google/**
+			    or      rootglob:google3/third_party/py/torch/*.bara.sky
+			    or      rootglob:google3/third_party/py/torch/BUILD
+  			    or      rootglob:google3/third_party/py/torch/OWNERS
+   			    or      rootglob:google3/third_party/py/torch/METADATA
+ 			    or      rootglob:google3/third_party/py/torch/*.blueprint
+  			    or      rootglob:google3/third_party/py/torch/bluze.textproto
+			   ) and not binary()
+
+[alias]
+ptlint = lint google/ BUILD OWNERS METADATA third_party.torch.blueprint bluze.textproto copy.bara.sky patches.bara.sky style.bara.sky transform.bara.sky build.bara.sky
+presubmit = presubmit --detach
+
+

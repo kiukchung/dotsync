@@ -1,8 +1,0 @@
-**/src/*.egg-info/
-**/__pycache__/
-**/*.iml
-**/package-lock.json
-ssh/*.pem
-.idea
-.python-version
-.torchxconfig

@@ -7,12 +7,16 @@
 *.swp
 .DS_Store
 *~
-vnc/vnc/*.log
-vnc/vnc/*.pid
-vnc/vnc/passwd
+vnc/*.log
+vnc/*.pid
+vnc/passwd
+
 ssh/known_hosts
 ssh
 
-emacs/emacsd/eln-cache
+emacsd/eln-cache
 
 zsh/custom-zsh-config/plugins/fig-prompt/**
+zsh/custom-zsh-config/plugins/google/**
+
+bin/conda
