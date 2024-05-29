@@ -40,3 +40,4 @@
 [submodule "zsh/custom-zsh-config/plugins/zsh-completions"]
 	path = custom-zsh-config/plugins/zsh-completions
 	url = https://github.com/zsh-users/zsh-completions
+
