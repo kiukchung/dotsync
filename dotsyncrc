@@ -1,6 +1,8 @@
+# Usage:
+# $ DSHOST=localhost bin/dotsync -L
+# -----------------------------------------
 # Location of your dotfiles in $HOME
 DOTFILES=.dotfiles
-
 # dotfiles to symlink
 #
 # srcfile:dstfile

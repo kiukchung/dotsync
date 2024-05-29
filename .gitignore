@@ -14,9 +14,9 @@ vnc/passwd
 ssh/known_hosts
 ssh
 
-emacsd/eln-cache
+emacs.d/eln-cache/**
 
-zsh/custom-zsh-config/plugins/fig-prompt/**
-zsh/custom-zsh-config/plugins/google/**
+custom-zsh-config/plugins/fig-prompt/**
+custom-zsh-config/plugins/google/**
 
 bin/conda
