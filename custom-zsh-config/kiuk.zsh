@@ -114,7 +114,7 @@ pf(){ ps -eaf | grepc "$*" }
 
 masterkill(){ sudo kill -9 `ps -eaf | grepc "$*" | grep -v grep | awk '{print $2}'` }
 
-#ta(){ tmux attach-session -dt "$*" }
+ta(){ tmux attach-session -dt "$*" }
 
 rless(){ ls -ltr "$1" }
 
@@ -196,11 +196,3 @@ export PROMPT_COMMAND="history -a; history -n"
 # zsh-syntax-highlightning
 ZSH_HIGHLIGHT_HIGHLIGHTERS+=(brackets cursor)
 
-function get_fig_prompt_template() {
-  echo -n '%b%B%F{white}('
-  echo -n '%F{magenta}p4head%F{yellow}FIG_PROMPT_AHEAD%F{orange}FIG_PROMPT_UNEXPORTED%F{red}FIG_PROMPT_OBSOLETE'
-  echo -n '%F{white}|'
-  echo -n '%F{yellow}FIG_PROMPT_MODIFIED%F{green}FIG_PROMPT_ADDED'
-  echo -n '%F{red}FIG_PROMPT_DELETED%F{magenta}FIG_PROMPT_UNKNOWN%F{white}FIG_PROMPT_CLEAN'
-  echo -n '%F{white})%b'
-}

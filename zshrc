@@ -14,6 +14,7 @@ plugins=(
     git-prompt
     shrink-path
     fzf
+    fb
     # aws (uncomment if using aws)
      # zsh-* plugins need to go LAST!
     zsh-syntax-highlighting
