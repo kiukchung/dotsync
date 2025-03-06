@@ -51,3 +51,5 @@
 [merge]
     tool = ediff
     
+[http "https://git.internal.tfbnw.net/"]
+	sslCert = /var/facebook/credentials/kiuk/x509/kiuk.pem

@@ -26,7 +26,7 @@ condarc
 python-version
 aws
 fonts
-oh-my-zsh
+#oh-my-zsh
 custom-zsh-config:custom-zsh-config
 bin:bin
 [endfiles]
