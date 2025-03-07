@@ -1,0 +1,2 @@
+#!/bin/bash
+hg.real log --pager never --color never -r 'sort(draft(), -date)' --template "{label(sl_label, separate(' ', sl_node_info, pad(sl_diff, 8), sl_desc))}\n"

@@ -18,6 +18,7 @@ tmux
 tmux.conf
 vnc
 zshrc
+inputrc
 Xmodmap
 proxychains
 pycharm
