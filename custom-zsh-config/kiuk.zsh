@@ -146,7 +146,6 @@ alias -g ELS='|& less -S'
 alias -g ETL='|& tail -20'
 alias -g ET='|& tail'
 alias -g F=' | fmt -'
-alias -g G='| egrep'
 alias -g H='| head'
 alias -g HL='|& head -20'
 alias -g Sk="*~(*.bz2|*.gz|*.tgz|*.zip|*.z)"
