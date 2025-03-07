@@ -140,7 +140,6 @@ alias -g C='| wc -l'
 alias -g D="DISPLAY=:0.0"
 alias -g DN='/dev/null'
 alias -g ED="export DISPLAY=:0.0"
-alias -g EG='|& egrep'
 alias -g EH='|& head'
 alias -g EL='|& less'
 alias -g ELS='|& less -S'
@@ -166,9 +165,7 @@ alias -g TL='| tail -20'
 alias -g T='| tail'
 alias -g US='| sort -u'
 alias -g VM='/var/log/messages'
-alias -g X0G='| xargs -0 egrep'
 alias -g X0='| xargs -0'
-alias -g XG='| xargs egrep'
 alias -g X='| xargs'
 
 export LC_ALL=en_US.UTF-8
