@@ -2,6 +2,7 @@
 editor = emacs -nw
 merge = meld
 username = kiuk
+ignore = /home/kiuk/.hgignore
 
 [pager]
 ignore = log,ll,xl,status

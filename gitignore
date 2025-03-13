@@ -1,3 +1,4 @@
+.gitignore
 **/src/*.egg-info/
 **/__pycache__/
 **/*.iml
@@ -8,3 +9,5 @@ ssh/*.pem
 .torchxconfig
 third_party/**
 third_party
+**/memory_view_*.json
+**/trace_*.json

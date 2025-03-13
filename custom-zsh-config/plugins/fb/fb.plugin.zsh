@@ -1,4 +1,4 @@
-source /usr/facebook/ops/rc/master.zshrc
+#source /usr/facebook/ops/rc/master.zshrc
 
 # .fb.zshrc
 
@@ -63,18 +63,6 @@ alias p='superpaste'
 
 export no_proxy=".fbcdn.net,.facebook.com,.thefacebook.com,.tfbnw.net,.fb.com,.fburl.com,.facebook.net,.sb.fbsbx.com,localhost"
 export RSYNC_PROXY=fwdproxy:8080
-export HTTP_PROXY="http://fwdproxy:8080"
-export HTTPS_PROXY="http://fwdproxy:8082"
-export http_proxy="http://fwdproxy:8080"
-export https_proxy="http://fwdproxy:8080"
+
 alias pp='https_proxy=http://fwdproxy:8080 http_proxy=http://fwdproxy:8080 no_proxy=.fbcdn.net,.facebook.com,.thefacebook.com,.tfbnw.net,.fb.com,.fburl.com,.facebook.net,.sb.fbsbx.com,localhost'
 alias with-proxy='HTTPS_PROXY=http://fwdproxy:8080 HTTP_PROXY=http://fwdproxy:8080 FTP_PROXY=http://fwdproxy:8080 https_proxy=http://fwdproxy:8080 http_proxy=http://fwdproxy:8080 ftp_proxy=http://fwdproxy:8080 http_no_proxy='\''\'\'\''*.facebook.com|*.tfbnw.net|*.fb.com'\''\'\'
-
-_fzf_complete_hg() {
-  _fzf_complete "--ansi --no-sort" "$@" < <(
-    hg.pager|fzf-tmux
-  )
-}
-_fzf_complete_hg_post() {
-  cut -d' ' -f1
-}

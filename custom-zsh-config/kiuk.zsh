@@ -114,7 +114,8 @@ pf(){ ps -eaf | grepc "$*" }
 
 masterkill(){ sudo kill -9 `ps -eaf | grepc "$*" | grep -v grep | awk '{print $2}'` }
 
-ta(){ tmux attach-session -dt "$*" }
+ta(){ tmux new-session -d -s "$*" && tmux attach-session -dt "$*" }
+
 
 rless(){ ls -ltr "$1" }
 

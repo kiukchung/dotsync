@@ -12,6 +12,7 @@ DOTFILES=.dotfiles
 dotsyncrc
 gitconfig
 gitignore
+hgignore
 emacs
 emacs.d
 tmux

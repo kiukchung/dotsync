@@ -53,3 +53,9 @@
     
 [http "https://git.internal.tfbnw.net/"]
 	sslCert = /var/facebook/credentials/kiuk/x509/kiuk.pem
+
+[http "https://github.com"]
+  proxy = https://fwdproxy:8082
+  proxySSLCert=/var/facebook/credentials/kiuk/x509/kiuk.pem
+  proxySSLKey=/var/facebook/credentials/kiuk/x509/kiuk.pem
+  
