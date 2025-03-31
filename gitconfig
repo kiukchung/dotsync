@@ -59,3 +59,9 @@
   proxySSLCert=/var/facebook/credentials/kiuk/x509/kiuk.pem
   proxySSLKey=/var/facebook/credentials/kiuk/x509/kiuk.pem
   
+[http]
+	proxy = http://fwdproxy:8080
+[checkout]
+	workers = -1
+[url "ssh://git@github.com/"]
+	insteadOf = https://github.com/

@@ -1,2 +1,5 @@
 auto_activate_base: false
 add_pip_as_python_dependency: true
+proxy_servers:
+  http: http://fwdproxy:8080
+  https: http://fwdproxy:8080
