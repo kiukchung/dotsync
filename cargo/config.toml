@@ -3,3 +3,6 @@ proxy = "fwdproxy:8080"
 
 [https]
 proxy = "fwdproxy:8080"
+
+[net]
+git-fetch-with-cli = true
