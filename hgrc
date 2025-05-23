@@ -25,3 +25,7 @@ evolution.allowdivergence=yes
 
 
 
+
+[isl]
+submitAsDraft = false
+pull-button-choice = "arc pull"

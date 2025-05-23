@@ -1,5 +1,3 @@
-typeset -U PATH path
-
 source /usr/facebook/ops/rc/master.zshrc
 
 export ZSH="$HOME/.oh-my-zsh"
@@ -19,13 +17,11 @@ plugins=(
     shrink-path
     fzf
     fb
-    # aws (uncomment if using aws)
-     # zsh-* plugins need to go LAST!
     zsh-syntax-highlighting
     zsh-autosuggestions
 )
 
-PATH=$PATH
+#PATH=$PATH
 
 source $ZSH/oh-my-zsh.sh
 
@@ -44,6 +40,9 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+# Cargo/Rust
+. "$HOME/.cargo/env"
 
 # Generated for envman. Do not edit.
 [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
+

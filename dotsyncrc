@@ -31,6 +31,7 @@ fonts
 #oh-my-zsh
 custom-zsh-config:custom-zsh-config
 bin:bin
+cargo/config.toml:.cargo/config.toml
 [endfiles]
 
 # Hosts to sync

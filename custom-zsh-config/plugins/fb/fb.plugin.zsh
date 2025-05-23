@@ -36,6 +36,7 @@ alias my='myles' # fast file finder: https://www.internalfb.com/intern/wiki/Myle
 
 # Shortcuts to changing directories
 alias fbc='cd ~/fbsource/fbcode'
+alias xlf='cd ~/fbsource/genai/xlformers-branches/main_monarch'
 alias con='cd ~/configerator'
 alias op='cd ~/opsfiles'
 alias spells='cd ~/.spells'
@@ -61,8 +62,17 @@ superpaste () {
 }
 alias p='superpaste'
 
+
+export HTTPS_PROXY=http://fwdproxy:8080
+export HTTP_PROXY=http://fwdproxy:8080
+export FTP_PROXY=http://fwdproxy:8080
+export https_proxy=http://fwdproxy:8080
+export http_proxy=http://fwdproxy:8080
+export ftp_proxy=http://fwdproxy:8080
+export http_no_proxy='\''*.facebook.com|*.tfbnw.net|*.fb.com'\'
 export no_proxy=".fbcdn.net,.facebook.com,.thefacebook.com,.tfbnw.net,.fb.com,.fburl.com,.facebook.net,.sb.fbsbx.com,localhost"
 export RSYNC_PROXY=fwdproxy:8080
 
-alias pp='https_proxy=http://fwdproxy:8080 http_proxy=http://fwdproxy:8080 no_proxy=.fbcdn.net,.facebook.com,.thefacebook.com,.tfbnw.net,.fb.com,.fburl.com,.facebook.net,.sb.fbsbx.com,localhost'
-alias with-proxy='HTTPS_PROXY=http://fwdproxy:8080 HTTP_PROXY=http://fwdproxy:8080 FTP_PROXY=http://fwdproxy:8080 https_proxy=http://fwdproxy:8080 http_proxy=http://fwdproxy:8080 ftp_proxy=http://fwdproxy:8080 http_no_proxy='\''\'\'\''*.facebook.com|*.tfbnw.net|*.fb.com'\''\'\'
+alias wp="HTTPS_PROXY=http://fwdproxy:8080 HTTP_PROXY=http://fwdproxy:8080 FTP_PROXY=http://fwdproxy:8080 https_proxy=http://fwdproxy:8080 http_proxy=http://fwdproxy:8080 ftp_proxy=http://fwdproxy:8080 http_no_proxy='\''*.facebook.com|*.tfbnw.net|*.fb.com'\'"
+
+export DOCKER_HOST=unix:///run/user/178959/podman/podman.sock
