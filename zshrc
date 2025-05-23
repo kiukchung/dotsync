@@ -21,8 +21,6 @@ plugins=(
     zsh-autosuggestions
 )
 
-#PATH=$PATH
-
 source $ZSH/oh-my-zsh.sh
 
 # >>> conda initialize >>>
